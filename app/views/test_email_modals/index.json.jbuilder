@@ -1,0 +1,1 @@
+json.array! @test_email_modals, partial: 'test_email_modals/test_email_modal', as: :test_email_modal

@@ -1,0 +1,2 @@
+module TestEmailModalsHelper
+end
