@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Title:</strong>
   <%= @test_email_modal.title %>
@@ -16,7 +14,7 @@
 </p>
 
 <%= link_to 'Edit', edit_test_email_modal_path(@test_email_modal) %> |
-<%= link_to 'Back', test_email_modals_path %>
+<%= link_to 'Back', test_email_modals_path %> | 
 <a data-toggle="modal" href="#email-modal-form-content" class=" email_share_button">Share</a> 
 
 <div class="modal fade" id="email-modal-form-content" role="dialog">
@@ -33,7 +31,7 @@
           <form action="<?php the_permalink(); ?>" method="post" role="form" id="shareForm">
       <div class="email-modal-form-group <?php echo $required;?>">
         <label for="name"><font color="#3262a0">Your Name:<sup>*</sup></font> <small><span class="text-danger"><?php echo $field;?></span></small></label>
-        <input type="text" class="form-control name" name="contact_name" id="name" placeholder="Name" readonly required>
+        <input type="text" class="form-control name" name="contact_name" id="name" placeholder="Name" value='<%= current_user.name %>' readonly required>
       </div>
 
       <div class="email-modal-form-group <?php echo $required;?>">
